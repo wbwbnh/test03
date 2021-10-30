@@ -5,7 +5,7 @@ package com.itheima.pojo;
  * @version 1.0
  * @date 2020/9/29 10:07
  * @description 标题
- * @package com.itheima.pojo
+ * @package com.itheima.pojofffffffff
  */
 public class Person {
     private String name;
