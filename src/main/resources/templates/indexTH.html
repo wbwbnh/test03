@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+sllllll
+案例放假阿勒飞进来
+=========================<br>
+<h1 id="a" style="color: red" th:text="${message}"></h1><br>
+=========================<br>
+用户名：<span th:text="${person.name}"></span><br>
+id：<span th:text="${person.id}"></span><br>
+年龄：<span th:text="${person.age}"></span><br>
+=========================<br>
+<table>
+    <tr>
+        <td>id</td>
+        <td>name</td>
+        <td>age</td>
+        <td>index</td>
+    </tr>
+
+    <tr th:each="person:${personList}">
+        <td th:text="${person.id}">1</td>
+        <td th:text="${person.name}">zhangsan</td>
+        <td th:text="${person.age}">18</td>
+        <td th:text="${personStat.index+1}">18</td>
+    </tr>
+</table>
+=========================<br>
+<div>
+    <div>key:no  value: 123</div>
+    <div>key:address  value: 深圳</div>
+</div>
+
+<div>
+    <div th:each="entry:${dataMap}">
+        key:<span th:text="${entryStat.current.key}"></span> <br />
+        value: <span th:text="${entryStat.current.value}"></span>
+    </div>
+</div>
+<br>=========================
+<a th:href="@{https://www.baidu.com(id=${id},age=${age})}">去百度</a>
+<a th:href="@{/test/show(id=${id},age=${age})}">去黑马</a>
+
+<br>=========================
+日期是：<span th:text="${#dates.format(date,'yyyy年MM月dd日 HH:mm:ss')}"></span>
+
+
+<br>=========================
+<div>
+    <div th:if="${age}>=18">如果年龄大于18岁显示数据</div>
+    <div>如果年龄不足18岁显示数据</div>
+</div>
+
+<button onclick="login()">点我</button>
+
+</body>
+<!--thymeleaf的内联-->
+<script th:inline="javascript">
+    var age = [[${age}]];
+    var login = function(){
+        alert(age);
+    }
+</script>
+</html>

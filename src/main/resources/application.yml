@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: testxxx
+  thymeleaf:
+    cache: false # 模板不需要缓存
+server:
+  port: 8080
