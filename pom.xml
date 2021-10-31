@@ -17,6 +17,7 @@
     <dependencies>
         <!--web起步依赖33
         push
+        pull
        -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
