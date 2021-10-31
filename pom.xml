@@ -15,7 +15,9 @@
     </parent>
 
     <dependencies>
-        <!--web起步依赖33-->
+        <!--web起步依赖33
+        push
+       -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
