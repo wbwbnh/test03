@@ -18,6 +18,7 @@
         <!--web起步依赖33
         push
         pull
+        ssh
        -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
